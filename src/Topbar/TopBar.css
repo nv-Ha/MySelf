@@ -1,0 +1,47 @@
+.TopBar {
+    width: 100%;
+    height: 5.5rem;
+    background-color: #202235;
+}
+
+.TopBar_List {
+    display: flex;
+    width: 70%;
+    /* background-color: aqua; */
+    height: 100%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.TopBar_Items {
+    display: flex;
+    align-items: center;
+}
+.TopBar_Items:nth-child(1) {
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+.TopBar_Items > p:nth-child(1) {
+    color: var(--primary-color);
+    margin-right: 0.2rem;
+}
+
+.TopBar_Items {
+    display: flex;
+}
+
+.TopBar_Items_List {
+    display: flex;
+}
+.TopBar_Items_List > li {
+    padding: 1.7rem 2.5rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+.TopBar_Items_List > li:hover {
+    background-color: #323446;
+    height: 100%;
+    border-radius: 5px;
+}

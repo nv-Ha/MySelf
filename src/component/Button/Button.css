@@ -1,0 +1,15 @@
+.Button {
+    background-color: var(--primary-color);
+    width: 15rem;
+    height: 3.5rem;
+    color: white;
+    letter-spacing: 0.5px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.Button:hover {
+    background-color: #df3541;
+    transition: 0.2s ease-out;
+}

@@ -1,0 +1,30 @@
+.App {
+    width: 100%;
+    color: #ffffff;
+    height: 100vh;
+    font-size: 1.2rem;
+    overflow: hidden;
+    background-color: #23263a;
+
+    .AppNav {
+        width: 70%;
+        margin: auto;
+        height: 100%;
+        position: relative;
+        scroll-snap-type: y mandatory;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        * {
+            scroll-behavior: smooth;
+
+            scroll-snap-align: start;
+        }
+    }
+}
+
+:root {
+    --primary-color: #ff4a57;
+}

@@ -1,0 +1,25 @@
+.Home {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.Home_List {
+    margin-top: -10%;
+}
+
+.Home_Items:nth-child(2) {
+    width: 30%;
+    opacity: 0.4;
+    margin-top: 2.5rem;
+    letter-spacing: 0.2px;
+    line-height: 25px;
+}
+
+.Home_Items:nth-child(1) > p {
+    font-size: 4rem;
+}
+.Home_Btn {
+    margin-top: 4.5rem;
+}
