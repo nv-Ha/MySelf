@@ -7,7 +7,7 @@ function Topbar() {
                 {/* - */}
                 <div className="TopBar_Items">
                     <p>My</p>
-                    <p>Selft</p>
+                    <p>Self</p>
                 </div>
                 {/* - */}
                 <div className="TopBar_Items">
