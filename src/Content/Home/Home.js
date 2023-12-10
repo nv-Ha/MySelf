@@ -1,9 +1,10 @@
 import Button from '../../component/Button/Button';
 import './Home.css';
+import React, { forwardRef } from 'react';
 
-function Home() {
+const Home = forwardRef((props, ref) => {
     return (
-        <div className="Home">
+        <div className="Home" ref={ref}>
             <div className="Home_List">
                 <div className="Home_Items">
                     <p>Hello, I'm</p>
@@ -19,6 +20,6 @@ function Home() {
             </div>
         </div>
     );
-}
+});
 
 export default Home;

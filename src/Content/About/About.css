@@ -3,25 +3,33 @@
     height: 100%;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    /* background-color: aqua; */
+}
+.About_List:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
 }
 
-.About_List:nth-child(1) {
+.About_List:nth-child(2) {
+    /* margin-top: rem; */
     width: 100%;
 }
-.About_List:nth-child(2) {
-    margin-top: -11rem;
-}
 .About_List {
-    margin-top: -5rem;
+    margin-top: -8rem;
+    width: 100%;
 }
 
 .About_List > img {
-    width: 25rem;
     height: auto;
+    width: 65%;
 }
 
 .About_Content {
     margin-top: 3rem;
+    width: 100%;
 }
 
 .About_LineText {
@@ -35,7 +43,7 @@
 
 .About_Content_List {
     display: flex;
-    margin-left: -2.5rem;
+    margin-left: -2rem;
     margin-top: 2rem;
 }
 
@@ -45,4 +53,21 @@
 
 .About_Btn {
     margin-top: 6rem;
+}
+
+@media (min-width: 600px) {
+    .About_List:nth-child(1) {
+        width: 40%;
+    }
+    .About_List:nth-child(2) {
+        width: 60%;
+    }
+    .About_Content_List {
+        width: 100%;
+    }
+
+    .About_Content {
+        /* Thêm margin bên trái để có khoảng cách tốt hơn trên màn hình lớn hơn */
+        width: 100%; /* Giới hạn chiều rộng của nội dung trên màn hình lớn hơn */
+    }
 }

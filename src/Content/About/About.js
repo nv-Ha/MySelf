@@ -1,14 +1,16 @@
+import React, { forwardRef } from 'react';
 import LineText from '../../component/LineText/LineText';
 import TextTitle from '../../component/TextTitle/TextTitle';
 import Button from '../../component/Button/Button';
 import './About.css';
 
-function About() {
+const About = forwardRef((props, ref) => {
     return (
-        <div className="About">
+        <div className="About" ref={ref}>
             <div className="About_List">
                 <img src="https://i.pinimg.com/564x/da/15/0f/da150f0689b045f5a36bacfa573d9e0b.jpg" alt="" />
             </div>
+            {/* --------------- */}
             <div className="About_List">
                 <span className="About_Title">
                     <TextTitle>
@@ -46,6 +48,6 @@ function About() {
             </div>
         </div>
     );
-}
+});
 
 export default About;

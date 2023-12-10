@@ -42,7 +42,7 @@ const data = [
 
 function Charts() {
     return (
-        <RadarChart cx={400} cy={250} outerRadius={150} width={1000} height={500} data={data}>
+        <RadarChart cx={500} cy={290} outerRadius={200} width={1000} height={500} data={data}>
             <PolarGrid />
             <PolarAngleAxis dataKey="subject" />
             <PolarRadiusAxis />

@@ -1,6 +1,14 @@
 import './TopBar.css';
+import React, { useState } from 'react';
 
-function Topbar() {
+function Topbar({ scrollRef }) {
+    const [selectedButton, setSelectedButton] = useState(null);
+
+    const handleClick = (targetRef, buttonName) => {
+        targetRef.current.scrollIntoView({ behavior: 'smooth' });
+        setSelectedButton(buttonName);
+        console.log(selectedButton);
+    };
     return (
         <div className="TopBar">
             <div className="TopBar_List">
@@ -11,13 +19,39 @@ function Topbar() {
                 </div>
                 {/* - */}
                 <div className="TopBar_Items">
-                    <ul className="TopBar_Items_List">
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>Skills</li>
-                        <li>Blog</li>
-                        <li>Contact</li>
-                    </ul>
+                    <div className="TopBar_Items_List">
+                        <button
+                            className={selectedButton === 'Home' ? 'ChooseColor' : ''}
+                            onClick={() => handleClick(scrollRef.home, 'Home')}
+                        >
+                            Home
+                        </button>
+
+                        <button
+                            className={selectedButton === 'About' ? 'ChooseColor' : ''}
+                            onClick={() => handleClick(scrollRef.about, 'About')}
+                        >
+                            About
+                        </button>
+                        <button
+                            className={selectedButton === 'Skills' ? 'ChooseColor' : ''}
+                            onClick={() => handleClick(scrollRef.skills, 'Skills')}
+                        >
+                            Skills
+                        </button>
+                        <button
+                            className={selectedButton === 'Blog' ? 'ChooseColor' : ''}
+                            onClick={() => handleClick(scrollRef.blog, 'Blog')}
+                        >
+                            Blog
+                        </button>
+                        <button
+                            className={selectedButton === 'Contact' ? 'ChooseColor' : ''}
+                            onClick={() => handleClick(scrollRef.contact, 'Contact')}
+                        >
+                            Contact
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

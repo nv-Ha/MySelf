@@ -13,13 +13,13 @@
         position: relative;
         scroll-snap-type: y mandatory;
         scrollbar-width: none;
+        // margin-top: 5.5rem;
+
         &::-webkit-scrollbar {
             display: none;
         }
 
         * {
-            scroll-behavior: smooth;
-
             scroll-snap-align: start;
         }
     }

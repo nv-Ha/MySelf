@@ -5,6 +5,9 @@
 .Blog_Line {
     width: 9rem;
 }
+.Blog_All {
+    margin-top: 5rem;
+}
 
 .Blog_Items {
     display: flex;

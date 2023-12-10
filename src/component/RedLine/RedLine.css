@@ -1,17 +1,19 @@
 .RedLine {
-    width: 40rem;
-    width: 40rem;
-    margin-top: 100px;
+    height: 15rem;
+    width: 32rem;
     transform: rotate(90deg);
+    /* background-color: aquamarine; */
+    position: absolute;
+    margin-top: 12rem;
+    z-index: 1;
 }
 
 .RedLine_List {
     position: relative;
     z-index: 1;
-    width: 100%;
     height: 0.3rem;
     background-color: var(--primary-color);
-    margin-top: 3rem;
+    margin-top: 7.3rem;
 }
 
 .RedLine_Circle {

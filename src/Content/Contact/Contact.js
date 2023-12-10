@@ -1,12 +1,11 @@
-// import TextTitle from '../../component/TextTitle/TextTitle';
-// import LineText from '../../component/LineText/LineText';
+import React, { forwardRef } from 'react';
 import './Contact.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faGlobe, faLocationDot, faMobileScreenButton, faPhone } from '@fortawesome/free-solid-svg-icons';
 
-function Contact() {
+const Contact = forwardRef((props, ref) => {
     return (
-        <div className="Contact">
+        <div className="Contact" ref={ref}>
             <div className="Contact_All">
                 <div className="Contact_Title">
                     <p>Contact</p>
@@ -83,6 +82,6 @@ function Contact() {
             </div>
         </div>
     );
-}
+});
 
 export default Contact;

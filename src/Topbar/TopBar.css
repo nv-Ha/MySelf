@@ -2,6 +2,10 @@
     width: 100%;
     height: 5.5rem;
     background-color: #202235;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 .TopBar_List {
@@ -35,13 +39,23 @@
 .TopBar_Items_List {
     display: flex;
 }
-.TopBar_Items_List > li {
+.TopBar_Items_List > button {
+    color: white;
+    font-size: 1.2rem;
     padding: 1.7rem 2.5rem;
     font-weight: 500;
     cursor: pointer;
+    background-color: transparent;
+    border: none;
 }
-.TopBar_Items_List > li:hover {
+.TopBar_Items_List > button:hover {
     background-color: #323446;
     height: 100%;
     border-radius: 5px;
+}
+
+/* TopBar.css */
+.TopBar .TopBar_Items_List .ChooseColor {
+    color: var(--primary-color);
+    font-weight: 600;
 }

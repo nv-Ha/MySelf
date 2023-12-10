@@ -10,7 +10,6 @@ const RedLine = () => {
                 <div className="Circle "></div>
                 <div className="Circle "></div>
                 <div className="Circle "></div>
-                <div className="Circle "></div>
             </div>
         </div>
     );

@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import './App.scss';
 import About from './Content/About/About';
 import Blog from './Content/Blog/Blog';
@@ -7,15 +8,22 @@ import Skill from './Content/Skills/Skills';
 import Topbar from './Topbar/Topbar';
 
 function App() {
+    const homeRef = useRef(null);
+    const aboutRef = useRef(null);
+    const skillsRef = useRef(null);
+    const blogRef = useRef(null);
+    const contactRef = useRef(null);
     return (
         <div className="App">
-            <Topbar />
+            <Topbar
+                scrollRef={{ home: homeRef, about: aboutRef, skills: skillsRef, blog: blogRef, contact: contactRef }}
+            />
             <div className="AppNav">
-                <Home />
-                <About />
-                <Skill />
-                <Blog />
-                <Contact />
+                <Home ref={homeRef} />
+                <About ref={aboutRef} />
+                <Skill ref={skillsRef} />
+                <Blog ref={blogRef} />
+                <Contact ref={contactRef} />
             </div>
         </div>
     );
