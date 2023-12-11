@@ -3,24 +3,13 @@
     height: 100%;
     display: flex;
     margin: 0 auto;
-}
-/* .Contact_LineText {
-    width: 15rem;
-} */
-.Contact_All {
-    width: 100%;
-    margin: 5rem auto;
-}
-.Contact_Nav {
-    display: flex;
-    justify-content: center;
+    overflow: hidden;
+    position: relative;
 }
 
 .Contact_Title {
+    margin-top: 8rem;
     display: flex;
-    margin-top: 5rem;
-    margin-bottom: 2rem;
-    z-index: 100;
     justify-content: center;
 }
 .Contact_Title > p {
@@ -36,6 +25,10 @@
 }
 
 /* ---input */
+.Contact_Nav {
+    display: flex;
+    justify-content: center;
+}
 .Contact_Input {
     margin-top: 2rem;
     margin-left: 4rem;

@@ -2,11 +2,12 @@ import './Blog.css';
 import TextTitle from '../../component/TextTitle/TextTitle';
 import LineText from '../../component/LineText/LineText';
 import React, { forwardRef } from 'react';
+import LayoutAll from '../../component/LayoutAll/LayoutAll';
 
 const Blog = forwardRef((props, ref) => {
     return (
         <div className="Blog" ref={ref}>
-            <div className="Blog_All">
+            <LayoutAll>
                 <div className="Blog_Title">
                     <TextTitle>
                         <p>Blog</p>
@@ -112,7 +113,7 @@ const Blog = forwardRef((props, ref) => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </LayoutAll>
         </div>
     );
 });

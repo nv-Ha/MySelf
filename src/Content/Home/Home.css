@@ -16,6 +16,9 @@
 .Home_Items:nth-child(1) > p {
     font-size: 4rem;
 }
+.Home_Items > p > span {
+    color: var(--primary-color);
+}
 .Home_Btn {
     margin-top: 4.5rem;
 }

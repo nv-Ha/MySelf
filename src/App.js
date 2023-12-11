@@ -6,6 +6,7 @@ import Contact from './Content/Contact/Contact';
 import Home from './Content/Home/Home';
 import Skill from './Content/Skills/Skills';
 import Topbar from './Topbar/Topbar';
+import LayoutAll from './component/LayoutAll/LayoutAll';
 
 function App() {
     const homeRef = useRef(null);
@@ -19,7 +20,10 @@ function App() {
                 scrollRef={{ home: homeRef, about: aboutRef, skills: skillsRef, blog: blogRef, contact: contactRef }}
             />
             <div className="AppNav">
-                <Home ref={homeRef} />
+                <LayoutAll>
+                    <Home ref={homeRef} />
+                </LayoutAll>
+
                 <About ref={aboutRef} />
                 <Skill ref={skillsRef} />
                 <Blog ref={blogRef} />

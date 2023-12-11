@@ -2,13 +2,16 @@ import './TopBar.css';
 import React, { useState } from 'react';
 
 function Topbar({ scrollRef }) {
-    const [selectedButton, setSelectedButton] = useState(null);
+    const [selectedButton, setSelectedButton] = useState('Home');
 
     const handleClick = (targetRef, buttonName) => {
         targetRef.current.scrollIntoView({ behavior: 'smooth' });
         setSelectedButton(buttonName);
         console.log(selectedButton);
     };
+
+    // ...
+
     return (
         <div className="TopBar">
             <div className="TopBar_List">

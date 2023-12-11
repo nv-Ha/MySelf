@@ -1,12 +1,28 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useState, useEffect } from 'react';
 import './Contact.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faGlobe, faLocationDot, faMobileScreenButton, faPhone } from '@fortawesome/free-solid-svg-icons';
+import LayoutAll from '../../component/LayoutAll/LayoutAll';
 
 const Contact = forwardRef((props, ref) => {
+    const [messanger, setMessanger] = useState(false);
+
+    const hangdleMessanger = () => {
+        setMessanger(true);
+    };
+
+    useEffect(() => {
+        if (messanger) {
+            const timer = setTimeout(() => {
+                setMessanger(false);
+            }, 8000);
+
+            return () => clearTimeout(timer);
+        }
+    }, [messanger]);
     return (
         <div className="Contact" ref={ref}>
-            <div className="Contact_All">
+            <LayoutAll>
                 <div className="Contact_Title">
                     <p>Contact</p>
                     <p> With me</p>
@@ -76,10 +92,15 @@ const Contact = forwardRef((props, ref) => {
                         <input placeholder="Email" type="email" />
                         <input placeholder="Phone Number" type="number" />
                         <input placeholder="Messanger" type="text" />
-                        <button className="Contact_Button">Submit</button>
+                        <div>
+                            <button className="Contact_Button" onClick={hangdleMessanger}>
+                                Submit
+                            </button>
+                            {messanger && <p>Thanks for contacting ! </p>}
+                        </div>
                     </div>
                 </div>
-            </div>
+            </LayoutAll>
         </div>
     );
 });

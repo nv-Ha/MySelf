@@ -4,10 +4,9 @@
     margin: 0;
     padding: 0;
     position: relative;
+    overflow: hidden;
 }
-.Skill_All {
-    margin-top: 5rem;
-}
+
 .Education {
     display: flex;
     height: auto;
@@ -18,21 +17,25 @@
 
 .Skill_List {
     width: auto;
-    height: 40rem;
-    margin-right: 4rem;
+    height: 100%;
     display: flex;
     justify-content: center;
 }
 .Skill_List:nth-child(1) {
-    width: 60rem;
+    width: 80rem;
+    position: relative;
     height: auto;
-    margin-right: 4rem;
     display: flex;
+    z-index: 1;
+}
+.Skill_List:nth-child(2) {
+    position: relative;
+    z-index: 10;
 }
 
 /* --Charrt */
 .Skill_List_Chart {
-    margin-left: -10rem;
+    margin-left: -18rem;
 }
 
 /* --Skill box */
